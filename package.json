@@ -1,0 +1,14 @@
+{
+  "name": "AdvancedWhitelist",
+  "version": "1.0.0",
+  "description": "AdvancedWhitelist",
+  "main": "run.js",
+  "scripts": {
+    "start": "node run.js"
+  },
+  "author": "hope",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
+}
