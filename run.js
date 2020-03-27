@@ -19,13 +19,13 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  if (msg.author.bot) return;
-  if (msg.channel.id === 'yourchannelidhere' && msg.content.search('/addwhitelist')) {
-      var command = msg.content.split(' ')
+  if (msg.author.bot) return; //your channel id in left
+  if (msg.channel.id === 'yourchannelidhere' && msg.content.search('/addwhitelist')) { //your add whitelist command is addwhitelist
+      var command = msg.content.split(' ') //do not change this fucking area please. If you change run.js isn't run correctly
       if(command[1] === undefined || command[2]) {
         msg.reply('Wrong use. Please try "!add steamid64"!');
       } else {
-        fs.readFile('whitelist.json', 'utf8', function readFileCallback(err, data){
+        fs.readFile('whitelist.json', 'utf8', function readFileCallback(err, data){ //if your language have this characters: "ş","ö" you can isn't change this area. If your language can't have this characters you can change utf8 to utf8_en ok :)
         if (err){
             console.log(err);
         } else {
@@ -49,9 +49,9 @@ client.on('message', msg => {
         }
     }});
       }
-  } else if (msg.channel.id === 'channelkey' && msg.content.search('/removewhitelist')){
-    msg.reply('This command appears to be invalid at this time.');
+  } else if (msg.channel.id === 'channelkey' && msg.content.search('/removewhitelist')){ //your remove whiteist command is removewhitelist
+    msg.reply('This command appears to be invalid at this time.'); //players just one moment at this use this commands.
   }
 });
 
-client.login('botkey');
+client.login('botkey'); //your bot FUCKING KEYYY!!!!!
